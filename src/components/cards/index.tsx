@@ -7,6 +7,7 @@ import {
     CardTitle,
 } from "@/components/ui/card";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 function Cards() {
     const [expandedCard, setExpandedCard] = useState<number | null>(null);
@@ -52,12 +53,12 @@ function Cards() {
                             style={{
                                 userSelect: "none",
                                 width: expandedCard === index ? "15%" : "35%",
-                                height: expandedCard === index ? "100%" : "100%",
+                                height: "100%",
                                 display: "inline-block",
                                 fill: item.color,
                                 color: item.color,
                                 flexShrink: 0,
-                                transition: "width 0.3s, height 0.3s",
+                                transition: "width 0.3s",
                             }}
                         >
                             {item.svg}
@@ -65,11 +66,23 @@ function Cards() {
                         <CardTitle>{item.title}</CardTitle>
                         <CardDescription>Card Description</CardDescription>
                     </CardHeader>
-                    {expandedCard === index && (
-                        <CardContent>
-                            <p>Card Content</p>
-                        </CardContent>
-                    )}
+
+                    {/* Animação de entrada e saída do conteúdo */}
+                    <AnimatePresence>
+                        {expandedCard === index && (
+                            <motion.div
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: "auto" }}
+                                exit={{ opacity: 0, height: 0 }}
+                                transition={{ duration: 0.3 }}
+                            >
+                                <CardContent>
+                                    <p>Card Content</p>
+                                </CardContent>
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
+
                     <CardFooter>
                         <p>Card Footer</p>
                     </CardFooter>
