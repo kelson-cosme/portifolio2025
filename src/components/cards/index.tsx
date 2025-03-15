@@ -11,6 +11,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import SobrePreview from "@/components/pages/sobre/SobrePreview";
 import ProjetosPreview from "@/components/pages/projetos/ProjetosPreview";
 import StackPreview from "../pages/stack/StackPreview";
+import Footer from "../footer/Footer";
 
 function Cards() {
     const [expandedCard, setExpandedCard] = useState<number | null>(null);
@@ -98,6 +99,7 @@ function Cards() {
         <SobrePreview />
         <ProjetosPreview />
         <StackPreview />
+        <Footer />
 
         </>
 
