@@ -8,6 +8,9 @@ import {
 } from "@/components/ui/card";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import SobrePreview from "@/components/pages/sobre/SobrePreview";
+import ProjetosPreview from "@/components/pages/projetos/ProjetosPreview";
+import StackPreview from "../pages/stack/StackPreview";
 
 function Cards() {
     const [expandedCard, setExpandedCard] = useState<number | null>(null);
@@ -17,7 +20,8 @@ function Cards() {
     };
 
     return (
-        <div className="grid sm:grid-cols-3 gap-4">
+        <>
+        <div className="grid sm:grid-cols-3 gap-4 mt-5">
             {[
                 {
                     title: "UI/UX Designer",
@@ -88,7 +92,15 @@ function Cards() {
                     </CardFooter>
                 </Card>
             ))}
+
         </div>
+
+        <SobrePreview />
+        <ProjetosPreview />
+        <StackPreview />
+
+        </>
+
     );
 }
 

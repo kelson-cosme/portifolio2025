@@ -1,4 +1,6 @@
 import Cards from "@/components/cards"
+
+
 function Home(){
     return(
         <section>
@@ -7,6 +9,7 @@ function Home(){
             
             <div>
                 <Cards />
+
             </div>
         </section>
     )

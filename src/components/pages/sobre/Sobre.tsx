@@ -1,95 +1,11 @@
-function Sobre(){
-    return(
-        <>
-            Pagina Sobre
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
 
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-            <h1>daddaa</h1>
-        </>
-    )
+function Sobre() {
+  return (
+    <div>
+      <h1>Minhas Certificações</h1>
+      <p>Vai estar as certificações completas...</p>
+    </div>
+  );
 }
 
 export default Sobre
