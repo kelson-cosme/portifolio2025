@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "../ui/button";
+import { Link } from "react-router";
 
 function Footer() {
     return (
@@ -13,7 +14,9 @@ function Footer() {
 
                 <h1 className="text-center font-bold text-white">Você tem alguma ideia de projeto que queira discutir?</h1>
                 <Button>
-                    Entre em contato
+                    <Link to={"/contato"}>
+                        Entre em contato
+                    </Link>
                 </Button>
             </Card>
         </div>
