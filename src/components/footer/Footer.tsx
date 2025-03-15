@@ -4,7 +4,7 @@ import { Link } from "react-router";
 
 function Footer() {
     return (
-        <div className="flex flex-col mt-11 relative overflow-hidden">
+        <footer className="flex flex-col mt-11 relative overflow-hidden">
             <Card className="sm:p-29 p-10 relative bg-white/90 backdrop-blur-lg overflow-hidden flex flex-col items-center justify-center" style={{
                 position: "relative",
                 background: "radial-gradient(circle, rgba(58,55,117,1) 0%, rgba(24,24,36,1) 100%)"
@@ -19,7 +19,7 @@ function Footer() {
                     </Link>
                 </Button>
             </Card>
-        </div>
+        </footer>
     );
 }
 
