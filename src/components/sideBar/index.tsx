@@ -12,14 +12,18 @@ import {
 import {  FolderCode, HomeIcon, Instagram, Linkedin, Package, PanelBottom, Phone, Terminal, UserRound } from "lucide-react";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Tooltip, TooltipTrigger } from "@radix-ui/react-tooltip";
+import SpotlightCard from '@/ui/SpotlightCard/SpotlightCard';
 
 
 function SideBar(){
 
     return(
+
         <div className="flex  w-full flex-col gb-muted/40">
 
-            <aside className="fixed inset-y-0 left-0 z-10 hidden w-[18vw] border-r bg-background sm:flex flex-col">
+        <aside className="fixed inset-y-0 left-0 z-10 hidden w-[18vw] border-r bg-background sm:flex flex-col">
+        <SpotlightCard className="custom-spotlight-card h-full w-full" spotlightColor="rgba(0, 229, 255, 0.2)">
+               
                 <nav className="flex flex-col items-start gap-4 px-[2vw] py-[2vw] w-full ">
                     <TooltipProvider>
                         <Link className="flex w-9 h-9 shrink-0 items-center justify-center bg-primary text-primary-foreground rounded-full" to={"/#"}>
@@ -29,7 +33,7 @@ function SideBar(){
 
                         <Tooltip>
                             <TooltipTrigger asChild>
-                                <Link className="flex w-full gap-3 shrink-0 items-center rounded-lg text-muted-foreground transition-colors hover:text-foreground" to={"/"}>
+                                <Link className="flex w-full gap-3 shrink-0 items-center rounded-lg text-muted-foreground transition-colors hover:text-white" to={"/"}>
                                     <HomeIcon className="w-5 h-5" />
                                     Inicio
                                     <span className="sr-only">Inicio</span>
@@ -40,7 +44,7 @@ function SideBar(){
                         
                         <Tooltip>
                             <TooltipTrigger asChild>
-                                <Link className="flex w-full gap-3 shrink-0 items-center rounded-lg text-muted-foreground transition-colors hover:text-foreground" to={"/sobre"}>
+                                <Link className="flex w-full gap-3 shrink-0 items-center rounded-lg text-muted-foreground transition-colors hover:text-white" to={"/sobre"}>
                                     <UserRound className="w-5 h-5" />
                                     Sobre
                                     <span className="sr-only">Sobre</span>
@@ -51,7 +55,7 @@ function SideBar(){
                         
                         <Tooltip>
                             <TooltipTrigger asChild>
-                                <Link className="flex w-full gap-3 shrink-0 items-center rounded-lg text-muted-foreground transition-colors hover:text-foreground" to={"/projetos"}>
+                                <Link className="flex w-full gap-3 shrink-0 items-center rounded-lg text-muted-foreground transition-colors hover:text-white" to={"/projetos"}>
                                     <FolderCode className="w-5 h-5" />
                                     Projetos
                                     <span className="sr-only">Projetos</span>
@@ -62,7 +66,7 @@ function SideBar(){
                         
                         <Tooltip>
                             <TooltipTrigger asChild>
-                                <Link className="flex w-full gap-3 shrink-0 items-center  rounded-lg text-muted-foreground transition-colors hover:text-foreground" to={"/stack"}>
+                                <Link className="flex w-full gap-3 shrink-0 items-center  rounded-lg text-muted-foreground transition-colors hover:text-white" to={"/stack"}>
                                     <Terminal className="w-5 h-5" />
                                     Stack
                                     <span className="sr-only">Stack</span>
@@ -73,7 +77,7 @@ function SideBar(){
                         
                         <Tooltip>
                             <TooltipTrigger asChild>
-                                <Link className="flex w-full gap-3 shrink-0 items-center rounded-lg text-muted-foreground transition-colors hover:text-foreground" to={"/contato"}>
+                                <Link className="flex w-full gap-3 shrink-0 items-center rounded-lg text-muted-foreground transition-colors hover:text-white" to={"/contato"}>
                                     <Phone className="w-5 h-5" />
                                     Contato
                                     <span className="sr-only">Contato</span>
@@ -89,7 +93,7 @@ function SideBar(){
                        <TooltipProvider>
                         <Tooltip>
                                 <TooltipTrigger asChild>
-                                    <Link className="flex w-full gap-3 shrink-0 items-center rounded-lg text-muted-foreground transition-colors hover:text-foreground" to={"/#"}>
+                                    <Link className="flex w-full gap-3 shrink-0 items-center rounded-lg text-muted-foreground transition-colors hover:text-white" to={"/#"}>
                                         <Linkedin className="w-5 h-5" />
                                             Linkedin
                                         <span className="sr-only">Contato</span>
@@ -97,7 +101,7 @@ function SideBar(){
                                 </TooltipTrigger>
 
                                 <TooltipTrigger asChild>
-                                    <Link className="flex w-full gap-3 shrink-0 items-center rounded-lg text-muted-foreground transition-colors hover:text-foreground" to={"/#"}>
+                                    <Link className="flex w-full gap-3 shrink-0 items-center rounded-lg text-muted-foreground transition-colors hover:text-white" to={"/#"}>
                                         <Instagram className="w-5 h-5" />
                                             Instagram
                                         <span className="sr-only">Contato</span>
@@ -106,7 +110,10 @@ function SideBar(){
                             </Tooltip>                       </TooltipProvider>
                         
                 </nav>
+        </SpotlightCard>
+
             </aside>
+            
 
             {/* mobile */}
             <div className="sm:hidden flex flex-col sm:gap-4 sm:py-4 sm:pl:14 mb-4 sm:mb-0 ">

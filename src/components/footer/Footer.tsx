@@ -1,24 +1,32 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "../ui/button";
 import { Link } from "react-router";
+import Squares from '@/ui/Squares/Squares'
 
 function Footer() {
     return (
-        <footer className="flex flex-col mt-11 relative overflow-hidden">
-            <Card className="sm:p-29 p-10 relative bg-white/90 backdrop-blur-lg overflow-hidden flex flex-col items-center justify-center" style={{
-                position: "relative",
-                background: "radial-gradient(circle, rgba(58,55,117,1) 0%, rgba(24,24,36,1) 100%)"
+        <footer className="flex flex-col mt-11 relative overflow-hidden ">
+            <div className="absolute w-full left-0 top-0 h-full overflow-hidden rounded-2xl ">
+            <Squares 
+                speed={0.5} 
+                squareSize={30}
+                direction='up' // up, down, left, right, diagonal
+                borderColor='#fff'
+                hoverFillColor='#153033'
+                />
+            </div>
+            <Card className="sm:p-29 p-10 relative bg-transparent ">
 
-            }}>
-                <div className="absolute inset-0 pointer-events-none"></div>
-
-                <h1 className="text-center font-bold text-white">Você tem alguma ideia de projeto que queira discutir?</h1>
+                <h1  className="text-center font-bold text-black">Você tem alguma ideia de projeto que queira discutir?</h1>
                 <Button>
                     <Link to={"/contato"}>
                         Entre em contato
                     </Link>
                 </Button>
             </Card>
+
+                
+
         </footer>
     );
 }

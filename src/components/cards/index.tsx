@@ -7,15 +7,11 @@ import {
     CardTitle,
 } from "@/components/ui/card";
 
-import Aurora from '@/ui/Aurora/Aurora';
 
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import SobrePreview from "@/components/pages/sobre/SobrePreview";
-import ProjetosPreview from "@/components/pages/projetos/ProjetosPreview";
-import StackPreview from "../pages/stack/StackPreview";
-import Footer from "../footer/Footer";
+
 
 function Cards() {
     const [expandedCard, setExpandedCard] = useState<number | null>(null);
@@ -28,15 +24,8 @@ function Cards() {
         <>
 
 
-        <div className="p-10 grid sm:grid-cols-3 gap-15 mt-5 relative">
+        <div className="p-2 sm:p-2 grid sm:grid-cols-3 sm:gap-10 gap-3 mt-3 sm:mt-5 relative">
             <div className=" absolute top-0 left-0 w-full h-full">
-
-                <Aurora
-                    colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
-                    blend={0.5}
-                    amplitude={1.0}
-                    speed={0.5}
-                    />
             </div>
 
 
@@ -66,7 +55,9 @@ function Cards() {
                 
                 <Card
                     key={index}
-                    onClick={() => handleExpand(index)}
+                    onMouseEnter={() => handleExpand(index)}
+                    onMouseLeave={() => handleExpand(index)}
+
                     className="cursor-pointer relative"
                     
                 >
@@ -78,8 +69,12 @@ function Cards() {
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 256 256"
                         style={{
+                            position: "absolute",
+                            top: "0",
+                            right:"0",
                             userSelect: "none",
-                            width: expandedCard === index ? "15%" : "35%",
+                            width: expandedCard === index ? "45%" : "35%",
+                            float:"right",
                             height: "100%",
                             display: "inline-block",
                             flexShrink: 0,
@@ -125,10 +120,7 @@ function Cards() {
 
         </div>
 
-        <SobrePreview />
-        <ProjetosPreview />
-        <StackPreview />
-        <Footer />
+
 
         </>
 
