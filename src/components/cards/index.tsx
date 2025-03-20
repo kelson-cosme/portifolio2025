@@ -6,6 +6,10 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
+
+import Aurora from '@/ui/Aurora/Aurora';
+
+
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SobrePreview from "@/components/pages/sobre/SobrePreview";
@@ -22,7 +26,20 @@ function Cards() {
 
     return (
         <>
-        <div className="grid sm:grid-cols-3 gap-4 mt-5">
+
+
+        <div className="p-10 grid sm:grid-cols-3 gap-15 mt-5 relative">
+            <div className=" absolute top-0 left-0 w-full h-full">
+
+                <Aurora
+                    colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
+                    blend={0.5}
+                    amplitude={1.0}
+                    speed={0.5}
+                    />
+            </div>
+
+
             {[
                 {
                     title: "UI/UX Designer",
@@ -46,28 +63,40 @@ function Cards() {
                     ),
                 },
             ].map((item, index) => (
+                
                 <Card
                     key={index}
                     onClick={() => handleExpand(index)}
-                    className="cursor-pointer"
+                    className="cursor-pointer relative"
+                    
                 >
+
+
                     <CardHeader>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 256 256"
-                            style={{
-                                userSelect: "none",
-                                width: expandedCard === index ? "15%" : "35%",
-                                height: "100%",
-                                display: "inline-block",
-                                fill: item.color,
-                                color: item.color,
-                                flexShrink: 0,
-                                transition: "width 0.3s",
-                            }}
-                        >
-                            {item.svg}
-                        </svg>
+                        
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 256 256"
+                        style={{
+                            userSelect: "none",
+                            width: expandedCard === index ? "15%" : "35%",
+                            height: "100%",
+                            display: "inline-block",
+                            flexShrink: 0,
+                            transition: "width 0.3s",
+                        }}
+                    >
+                        {/* Definição do gradiente */}
+                        <defs>
+                            <linearGradient id={`fadeGradient-${index}`} x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="60%" stopColor={item.color} />
+                                <stop offset="90%" stopColor="transparent" />
+                            </linearGradient>
+                        </defs>
+
+                        {/* Aplicação do gradiente */}
+                        <path d={item.svg.props.d} fill={`url(#fadeGradient-${index})`} />
+                    </svg>
                         <CardTitle>{item.title}</CardTitle>
                         <CardDescription>Card Description</CardDescription>
                     </CardHeader>
