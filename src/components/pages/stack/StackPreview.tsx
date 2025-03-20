@@ -1,16 +1,42 @@
 import {
     Card,
   } from "@/components/ui/card"
-import { Link } from "react-router";
-  
+import Folder from '@/ui/Folder/Folder'
 
 function StackPreview(){
     return(
+        
         <div className="flex flex-col mt-11">
+
+
             <h1 className="text-3xl font-medium mb-4">Stack</h1>
 
-            <Card className="w-full relative grid grid-cols-2 sm:grid-cols-3 gap-9 p-6">
-                <p className="absolute bottom-0 right-0 p-4 font-medium"><Link to={"/stack"}>Ver completo</Link> </p>
+            <Card className="w-full flex  relative ">
+                <div  style={{ height: 'auto', width: 'auto', position: 'relative' }}>
+                <Folder 
+                    color="#ff9800"
+                    size={1}
+                    items={[
+                        { image: "https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58", link: "https://spotify.com" },
+                        { image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/d9/fa/1b/lost-valley.jpg?w=900&h=500&s=1", link: "https://tripadvisor.com" },
+                        { image: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png", link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" }
+                    ]}
+                    />
+                    <h2>Front-End</h2>
+                </div>
+
+                <div  style={{ height: 'auto', width: 'auto', position: 'relative' }}>
+                <Folder 
+                    color="red"
+                    size={1}
+                    items={[
+                        { image: "https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58", link: "https://spotify.com" },
+                        { image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/d9/fa/1b/lost-valley.jpg?w=900&h=500&s=1", link: "https://tripadvisor.com" },
+                        { image: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png", link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" }
+                    ]}
+                    />                    <h2>Back-End</h2>
+                </div>
+                {/* <p className="absolute bottom-0 right-0 p-4 font-medium"><Link to={"/stack"}>Ver completo</Link> </p>
 
                 <div className="sm:flex items-center ">
                     <div className="bg-[#f7f7f7] p-7 rounded-2xl flex justify-center" >
@@ -53,7 +79,7 @@ function StackPreview(){
                         <img width={'50vw'} src="https://cdn-icons-png.freepik.com/512/919/919847.png?ga=GA1.1.483244172.1742009398" alt="" />
                     </div>
                     <p className="m-3 text-center font-medium">Git/GitHub</p>
-                </div>
+                </div> */}
             </Card>
 
         </div>

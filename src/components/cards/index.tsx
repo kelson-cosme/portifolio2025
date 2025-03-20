@@ -58,12 +58,12 @@ function Cards() {
                     onMouseEnter={() => handleExpand(index)}
                     onMouseLeave={() => handleExpand(index)}
 
-                    className="cursor-pointer relative"
+                    className="cursor-pointer relative flex-col items-start"
                     
                 >
 
 
-                    <CardHeader>
+                    <CardHeader >
                         
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

@@ -1,6 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { Book, GraduationCap, LaptopMinimalCheck, StickyNote } from "lucide-react";
 import { Link } from "react-router";
+import Magnet from '@/ui/Magnet/Magnet'
+
 
 function SobrePreview() {
   return (
@@ -16,15 +18,18 @@ function SobrePreview() {
 
         <p className="absolute bottom-0 right-0 p-4 font-medium"><Link to={"/sobre"}>Ver completo</Link> </p>
 
-        <div className="border-b sm:border-b-0 border-gray-200 pb-4">
-          <GraduationCap />
-          <h2 className="mt-3 font-bold">Educação Acadêmica</h2>
-          <ul className="list-disc ml-5 text-gray-500 font-medium" >
-          <li className="mt-3 mb-3">Universidade ......</li>
-          </ul>
-          <p className="text-gray-500 font-medium">2018 - 2023</p>
-        </div>
+        <Magnet padding={50} disabled={false} magnetStrength={10}>
+          <div className="border-b sm:border-b-0 border-gray-200 pb-4">
+            <GraduationCap />
+            <h2 className="mt-3 font-bold">Educação Acadêmica</h2>
+            <ul className="list-disc ml-5 text-gray-500 font-medium" >
+            <li className="mt-3 mb-3">Universidade ......</li>
+            </ul>
+            <p className="text-gray-500 font-medium">2018 - 2023</p>
+          </div>
+        </Magnet>
 
+        <Magnet padding={50} disabled={false} magnetStrength={10}>
         <div className="border-b sm:border-b-0 border-gray-200 pb-4">
           <Book />
           <h2 className="mt-3 font-bold">Educação não formal</h2>
@@ -32,8 +37,10 @@ function SobrePreview() {
           <li className="mt-3 mb-3">Universidade ......</li>
           </ul>
           <p className="text-gray-500 font-medium">2018 - 2023</p>
-        </div>
+        </div>        
+        </Magnet>
 
+        <Magnet padding={50} disabled={false} magnetStrength={10}>
         <div className="border-b sm:border-b-0 border-gray-200 pb-4">
           <LaptopMinimalCheck />
           <h2 className="mt-3  font-bold"> Experiência</h2>
@@ -42,7 +49,9 @@ function SobrePreview() {
           </ul>
           <p className="text-gray-500 font-medium">2018 - 2023</p>
         </div>
+        </Magnet>
 
+        <Magnet padding={50} disabled={false} magnetStrength={10}>
         <div className="pb-4">
           <StickyNote />
           <h2 className="mt-3 font-bold">Certificações</h2>
@@ -51,6 +60,8 @@ function SobrePreview() {
           </ul>
           <p className="text-gray-500 font-medium">2018 - 2023</p>
         </div>
+        </Magnet>
+
       </Card>
     </div>
   );
