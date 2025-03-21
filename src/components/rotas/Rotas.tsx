@@ -5,6 +5,7 @@ import Sobre from "../pages/sobre/Sobre"
 import Projetos from "../pages/projetos/Projetos"
 import Stack from "../pages/stack/Stack"
 import Contato from "../pages/contato/Contato"
+import ProjetosDetalhes from "@/components/pages/projetos/ProjetosDetalhes"
 
 
 function Rotas(){
@@ -19,6 +20,7 @@ function Rotas(){
                     <Route path="/projetos" element={<Projetos />} />
                     <Route path="/stack" element={<Stack />} />
                     <Route path="/contato" element={<Contato />} />
+                    <Route path="/projetos/:titulo" element={<ProjetosDetalhes />}></Route>
 
                 </Routes>
             </BrowserRouter>
