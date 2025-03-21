@@ -16,9 +16,9 @@ function ProjetosPreview(){
                 <p className="absolute bottom-0 right-0 p-4 font-medium"><Link to={"/projetos"}>Ver completo</Link> </p>
 
                 <TiltedCard
-                    imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
+                    imageSrc="https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens/kemax/principal.jpg"
                     altText="Kendrick Lamar - GNX Album Cover"
-                    captionText="dadaa"
+                    captionText="Landing Page"
                     containerHeight="300px"
                     containerWidth="100%"
                     imageHeight="100%"
@@ -30,15 +30,15 @@ function ProjetosPreview(){
                     displayOverlayContent={true}
                     overlayContent={
                         <p className="tilted-card-demo-text bg-[black] p-2 rounded-2xl m-5 text-white">
-                            Projeto teste
+                            Kemax - Agência de Sites
                         </p>
                     }   
                     />
 
                 <TiltedCard
-                    imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
+                    imageSrc="https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens/memoriasDoAmor/principal.jpg"
                     altText="Kendrick Lamar - GNX Album Cover"
-                    captionText="dadaa"
+                    captionText="MicroSaaS"
                     containerHeight="300px"
                     containerWidth="100%"
                     imageHeight="100%"
@@ -50,16 +50,16 @@ function ProjetosPreview(){
                     displayOverlayContent={true}
                     overlayContent={
                         <p className="tilted-card-demo-text bg-[black] p-2 rounded-2xl m-5 text-white">
-                            Projeto teste
+                            Memórias do Amoor
                         </p>
                     }   
                     />
 
 
                 <TiltedCard
-                    imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
-                    altText="Kendrick Lamar - GNX Album Cover"
-                    captionText="dadaa"
+                    imageSrc="https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens/controleCliente/principal.jpg"
+                    altText="Sistema"
+                    captionText="Sistema"
                     containerHeight="300px"
                     containerWidth="100%"
                     imageHeight="100%"
@@ -71,7 +71,7 @@ function ProjetosPreview(){
                     displayOverlayContent={true}
                     overlayContent={
                         <p className="tilted-card-demo-text bg-[black] p-2 rounded-2xl m-5 text-white">
-                            Projeto teste
+                            Gerenciador de Clientes
                         </p>
                     }   
                     />
