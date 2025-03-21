@@ -5,8 +5,8 @@ import Squares from '@/ui/Squares/Squares'
 
 function Footer() {
     return (
-        <footer className="flex flex-col mt-11 relative overflow-hidden ">
-            <div className="absolute w-full left-0 top-0 h-full overflow-hidden rounded-2xl ">
+        <footer className="flex flex-col mt-11 relative overflow-hidden m-5">
+            <div className="absolute w-full left-0 top-0 h-full overflow-hidden rounded-2xl">
             <Squares 
                 speed={0.5} 
                 squareSize={30}

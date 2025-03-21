@@ -9,7 +9,7 @@ import {
 
 function ProjetosPreview(){
     return(
-        <div className="flex flex-col mt-11">
+        <div className="flex flex-col mt-11 p-5">
             <h1 className="text-3xl font-medium mb-4">Projetos</h1>
 
             <Card className="w-full relative grid grid-cols-1 gap-5 p-6 sm:grid-cols-3" >

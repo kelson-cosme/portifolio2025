@@ -6,7 +6,7 @@ import Magnet from '@/ui/Magnet/Magnet'
 
 function SobrePreview() {
   return (
-    <div className="flex flex-col mt-11">
+    <div className="flex flex-col mt-11 p-5">
       <h1 className="text-3xl font-medium mb-4">Sobre mim</h1>
 
       <Card className="w-full grid grid-cols-1 gap-9 p-6 relative sm:grid-cols-2">

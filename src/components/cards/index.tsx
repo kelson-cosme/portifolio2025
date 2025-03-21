@@ -24,7 +24,7 @@ function Cards() {
         <>
 
 
-        <div className="p-2 sm:p-2 grid sm:grid-cols-3 sm:gap-10 gap-3 mt-3 sm:mt-5 relative">
+        <div className=" m-4 sm:p-2 grid sm:grid-cols-3 sm:gap-10 gap-3 mt-3 sm:mt-5 relative ">
             <div className=" absolute top-0 left-0 w-full h-full">
             </div>
 
