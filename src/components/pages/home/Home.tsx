@@ -44,7 +44,7 @@ function Home(){
     <div className="absolute top-0 left-0 h-[100vh] inset-0 " ></div>
 
   {/* GridMotion como background */}
-  <div  className="absolute inset-0 bg-black/70 ">
+  <div  className="absolute inset-0 bg-black/70 h-[100vh] top-0 left-0 ">
     <GridMotion items={items} />
     {/* Overlay escuro */}
   </div>
