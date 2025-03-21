@@ -41,17 +41,17 @@ function Home(){
 
     return(
 <section className="relative max-w-[1366px] m-auto">
-    <div className="absolute top-0 left-0 h-[100vh] inset-0 bg-black opacity-70"></div>
+    <div className="absolute top-0 left-0 h-[100vh] inset-0 " ></div>
 
   {/* GridMotion como background */}
-  <div  className="absolute inset-0 z-0 ">
+  <div  className="absolute inset-0 bg-black/70 ">
     <GridMotion items={items} />
     {/* Overlay escuro */}
   </div>
 
-  <div className="h-[100vh] flex flex-col items-center justify-center p-5 relative z-10 text-white">
+  <div className="h-[100vh] flex flex-col items-center justify-center p-5 relative z-10 text-white ">
     <div className="sm:flex justify-center items-center">
-      <h1 className="text-5xl font-semibold">Olá👋,</h1>
+      <h1 className="text-5xl font-semibold ">Olá👋,</h1>
 
       <h1 className="text-3xl">
         <RotatingText
