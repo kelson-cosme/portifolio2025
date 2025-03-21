@@ -44,12 +44,12 @@ function Home(){
     <div className="absolute top-0 left-0 h-[100vh] inset-0 " ></div>
 
   {/* GridMotion como background */}
-  <div  className="absolute inset-0 bg-black/70 h-[100vh] top-0 left-0 ">
+  <div  className="absolute inset-0 bg-black/80 h-[100vh] top-0 left-0 sm:block hidden ">
     <GridMotion items={items} />
     {/* Overlay escuro */}
   </div>
 
-  <div className="h-[100vh] flex flex-col items-center justify-center p-5 relative z-10 text-white ">
+  <div className="h-[100vh] flex flex-col items-center justify-center p-5 relative z-10 sm:text-white text-[#111111]">
     <div className="sm:flex justify-center items-center">
       <h1 className="text-5xl font-semibold ">Olá👋,</h1>
 
