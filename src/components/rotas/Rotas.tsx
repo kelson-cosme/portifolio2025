@@ -20,7 +20,7 @@ function Rotas(){
                     <Route path="/projetos" element={<Projetos />} />
                     <Route path="/stack" element={<Stack />} />
                     <Route path="/contato" element={<Contato />} />
-                    <Route path="/projetos/:titulo" element={<ProjetosDetalhes />}></Route>
+                    <Route path="/projetos/:id" element={<ProjetosDetalhes />}></Route>
 
                 </Routes>
             </BrowserRouter>

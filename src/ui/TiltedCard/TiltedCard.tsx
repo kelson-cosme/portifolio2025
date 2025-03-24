@@ -90,7 +90,7 @@ export default function TiltedCard({
   }
 
   return (
-    <Link to={"/projetos"}>
+    <Link to={"/projetos/VoBujUxIRgqj1gxEmUWl"}>
     <figure
       ref={ref}
       className="relative w-full h-full [perspective:800px] flex flex-col items-center justify-center"

@@ -7,7 +7,6 @@ import RotatingText from '@/ui/RotatingText/RotatingText'
 
 import GridMotion from '@/ui/GridMotion/GridMotion';
 
-
 function Home(){
 
     const items = [
@@ -40,9 +39,8 @@ function Home(){
       
 
     return(
-      <section className="relative  m-auto">
+      <section className="relative overflow-hidden m-auto">
           <div className="absolute top-0 left-0 h-[100vh] inset-0 " ></div>
-
         {/* GridMotion como background */}
         <div  className="absolute inset-0 bg-black/80 h-[100vh] top-0 left-0 sm:block hidden ">
           <GridMotion items={items} />

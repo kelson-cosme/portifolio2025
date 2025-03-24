@@ -11,7 +11,7 @@ function StackPreview(){
 
             <h1 className="text-3xl font-medium mb-4 ">Stack</h1>
 
-            <Card className="w-full flex  relative ">
+            <Card className="w-full flex items-center justify-center relative ">
                 <div className="m-5" style={{ height: 'auto', width: 'auto', position: 'relative' }}>
                     <Folder 
                         color="#275A7B"
@@ -25,7 +25,7 @@ function StackPreview(){
                         <h2>Front-End</h2>
                 </div>
 
-                <div  className="m-7" style={{ height: 'auto', width: 'auto', position: 'relative' }}>
+                <div  className="m-5" style={{ height: 'auto', width: 'auto', position: 'relative' }}>
                     <Folder 
                         color="#4FBC69"
                         size={1}

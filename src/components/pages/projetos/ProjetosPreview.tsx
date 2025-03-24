@@ -13,7 +13,7 @@ function ProjetosPreview(){
             <h1 className="text-3xl font-medium mb-4">Projetos</h1>
 
             <Card className="w-full relative grid grid-cols-1 gap-5 p-6 pb-15 sm:grid-cols-3" >
-                <p className="absolute bottom-0 right-0 p-4 font-medium"><Link to={"/projetos"}>Ver completo</Link> </p>
+                <p className="absolute bottom-0 right-0 p-4 font-medium"><Link to={"/projetos/VoBujUxIRgqj1gxEmUWl"}>Ver completo</Link> </p>
 
                 <TiltedCard
                     imageSrc="https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens/kemax/principal.jpg"
