@@ -1,7 +1,6 @@
 import type { SpringOptions } from "framer-motion";
 import { useRef, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
-import {Link} from "react-router"
 
 interface TiltedCardProps {
   imageSrc: React.ComponentProps<"img">["src"];
@@ -90,7 +89,6 @@ export default function TiltedCard({
   }
 
   return (
-    <Link to={"/projetos/VoBujUxIRgqj1gxEmUWl"}>
     <figure
       ref={ref}
       className="relative w-full h-full [perspective:800px] flex flex-col items-center justify-center"
@@ -151,7 +149,6 @@ export default function TiltedCard({
         </motion.figcaption>
       )}
     </figure>
-    </Link>
 
   );
 }

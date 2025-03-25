@@ -9,6 +9,9 @@ import ProjetosDetalhes from "@/components/pages/projetos/ProjetosDetalhes"
 
 
 function Rotas(){
+
+
+
     return(
         <>
             <BrowserRouter>

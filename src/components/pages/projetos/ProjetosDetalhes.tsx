@@ -1,29 +1,60 @@
 import { useProjetos } from "@/components/context/ProjetosProvider";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { motion, AnimatePresence } from "framer-motion";
-
+import {  MoveLeft } from "lucide-react";
+import Footer from "@/components/footer/Footer";
 
 interface Imagem {
   endereco: string;
   tipo: string;
 }
 
+interface Visao {
+  visaoTitulo: string;
+  inovacoes: string[]; // ou outra interface mais complexa se necessário
+}
+interface Tecnologias {
+  name: string;
+  imagem: string; // ou outra interface mais complexa se necessário
+}
 interface Projeto {
   id: string;
   nome: string;
   descricao: string;
   titulo: string;
-  categoria: string; // Obrigatório
+  categoria: string;
   imagens: Imagem[];
+  visao: Visao;
+  tecnologias: Tecnologias[];
 }
 
 function ProjetosDetalhes() {
   const { id } = useParams(); // Obtém o ID da URL
   const { projetos } = useProjetos(); // Obtém os projetos do contexto
-const [projetoSelecionado, setProjetoSelecionado] = useState<Projeto | null>(null);
+  const [projetoSelecionado, setProjetoSelecionado] = useState<Projeto | null>(null);
   const [imagemSelecionada, setImagemSelecionada] = useState<Imagem | null>(null);
+
+  const navigate = useNavigate();
+
+
+// Variantes para o efeito cascata
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.3 // Delay adicional para garantir que a seção está visível
+    }
+  }
+};
+
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0 }
+};
 
   useEffect(() => {
     if (projetos.length > 0 && id) {
@@ -41,6 +72,9 @@ const [projetoSelecionado, setProjetoSelecionado] = useState<Projeto | null>(nul
     }
   }, [projetos, id]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0); // Garante que a página comece no topo ao carregar
+}, []);
 
   return (
     <>
@@ -52,7 +86,8 @@ const [projetoSelecionado, setProjetoSelecionado] = useState<Projeto | null>(nul
 
           <Card className="p-5 mt-6 flex-col">
             <div className="flex items-center justify-between w-full">
-              <h1>Voltar</h1>
+              <button className="cursor-pointer hover:bg-gray-100 rounded-full duration-300 ease-in-out p-5" onClick={() => navigate(-1)}><MoveLeft /></button>
+              
 
               <ul>
                 <li>Categoria: {projetoSelecionado.categoria}</li>
@@ -87,7 +122,7 @@ const [projetoSelecionado, setProjetoSelecionado] = useState<Projeto | null>(nul
                     projetoSelecionado.imagens.map((imagem, index) => (
                     <motion.div
                         key={index}
-                        className={`cursor-pointer rounded-2xl overflow-hidden ${
+                        className={`cursor-pointer sm:rounded-2xl rounded-[5px] overflow-hidden ${
                         imagemSelecionada?.endereco === imagem.endereco ? 'ring-4 ring-blue-500' : ''
                         }`}
                         onClick={() => setImagemSelecionada(imagem)}
@@ -106,16 +141,45 @@ const [projetoSelecionado, setProjetoSelecionado] = useState<Projeto | null>(nul
                 }
                 </div>
 
-{/* Imagem Ampliada com Animação */}
+                <h1 className="font-bold text-2xl">Recursos </h1>
+                  {projetoSelecionado && projetoSelecionado.visao.visaoTitulo}
+                  <ul className="list-disc ml-5">
+                    {projetoSelecionado && projetoSelecionado.visao.inovacoes.map((inovacao, index) => (
+                      <li key={index}>{inovacao}</li>
+                    ))}
+                  </ul>
 
-
-
+                  <h1 className="font-bold text-2xl">Tecnologias Utilizadas</h1>
+                  <motion.ul 
+                    className="grid grid-cols-2 gap-5 sm:flex flex-wrap justify-between items-center text-center"
+                    variants={container}
+                    initial="hidden"
+                    whileInView={window.matchMedia('(prefers-reduced-motion: no-preference)').matches ? "show" : "hidden"}
+                    viewport={{ once: false, margin: "-50px 0px -50px 0px" }} // Configurações do viewport
+                  >
+                    {projetoSelecionado && projetoSelecionado.tecnologias.map((e, index) => (
+                      <motion.li 
+                      className="sm:w-[15%]" 
+                      key={index} 
+                      variants={item}
+                      whileHover={{ scale: 1.05, y: -5 }}
+                    >
+                      <img className="w-[100%]" src={e.imagem} alt={e.name} />
+                      <h2 className="font-medium">{e.name}</h2>
+                    </motion.li>
+                    ))}
+                  </motion.ul>
 
           </Card>
+          <Footer />
+
+
         </section>
       ) : (
         <h1>Carregando...</h1>
       )}
+
+
     </>
   );
 }
