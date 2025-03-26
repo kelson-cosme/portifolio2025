@@ -29,6 +29,7 @@ interface Projeto {
   visao: Visao;
   tecnologias: Tecnologias[];
   link: string;
+  capa: string;
 }
 
 function ProjetosDetalhes() {
