@@ -1,9 +1,9 @@
 import { useProjetos } from "@/components/context/ProjetosProvider";
 import { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { motion, AnimatePresence } from "framer-motion";
-import {  MoveLeft } from "lucide-react";
+import {  MoveLeft, Eye } from "lucide-react";
 import Footer from "@/components/footer/Footer";
 
 interface Imagem {
@@ -28,6 +28,7 @@ interface Projeto {
   imagens: Imagem[];
   visao: Visao;
   tecnologias: Tecnologias[];
+  link: string;
 }
 
 function ProjetosDetalhes() {
@@ -59,6 +60,7 @@ const item = {
   useEffect(() => {
     if (projetos.length > 0 && id) {
       const projetoEncontrado = projetos.find((projeto) => projeto.id === id) || null;
+      console.log(projetoEncontrado?.titulo)
       setProjetoSelecionado(projetoEncontrado);
   
       // Verificação mais segura
@@ -94,28 +96,39 @@ const item = {
               </ul>
             </div>
 
+            
             <AnimatePresence mode="wait">
-                {imagemSelecionada && (
-                    <motion.div
-                    className="mt-8 flex m-auto justify-center"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    >
-                    <motion.img
-                        className="max-w-full max-h-[600px] object-contain rounded-lg shadow-lg"
-                        src={imagemSelecionada.endereco}
-                        alt="Imagem selecionada"
-                        key={imagemSelecionada.endereco} // Força reanimação ao trocar a imagem
-                        initial={{ scale: 0.9 }}
-                        animate={{ scale: 1 }}
-                        transition={{ type: "spring", stiffness: 200 }}
-                    />
-                    </motion.div>
-                )}
-                </AnimatePresence>
+              <Link className="m-auto" to={projetoSelecionado && projetoSelecionado.link} target="_blank">
+              {imagemSelecionada && (
+                <motion.div
+                  className="flex m-auto justify-center relative group cursor-pointer" 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <motion.img
+                    className="max-w-full max-h-[600px] object-contain rounded-lg shadow-lg transition duration-300 group-hover:brightness-55"
+                    src={imagemSelecionada.endereco}
+                    alt="Imagem selecionada"
+                    key={imagemSelecionada.endereco} // Força reanimação ao trocar a imagem
+                    initial={{ scale: 0.9 }}
+                    animate={{ scale: 1 }}
+                    transition={{ type: "spring", stiffness: 200 }}
+                  />
+                  
+                  {/* Ícone do olho */}
+                  <Eye
+                    className="absolute inset-0 m-auto text-white opacity-0 transition duration-300 group-hover:opacity-100"
+                    size={40}
+                  />
+                </motion.div>
+              )}
+              </Link>
+              
+            </AnimatePresence>
 
+            
 
             <div className="grid grid-cols-3 gap-5 max-w-[1003px] m-auto">
                 {projetoSelecionado && 

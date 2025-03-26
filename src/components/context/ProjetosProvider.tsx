@@ -24,6 +24,7 @@ interface Projeto {
   imagens: Imagem[];
   visao: Visao;
   tecnologias: Tecnologias[];
+  link: string;
 }
 
 interface ProjetosContextType {

@@ -5,8 +5,8 @@ import Footer from "@/components/footer/Footer";
 
 function Sobre() {
   return (
-    <section className="p-5">
-      <div className="flex flex-col p-5">
+    <section className="p-5 max-w-[1366px] m-auto">
+      <div className="flex flex-col">
           <h1 className="text-4xl font-bold mb-4">Sobre mim</h1>
 
           <Card className="w-full grid grid-cols-1 gap-9 p-6 relative sm:grid-cols-2">

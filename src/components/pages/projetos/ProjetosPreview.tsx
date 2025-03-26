@@ -17,7 +17,7 @@ function ProjetosPreview(){
             <Card className="w-full relative grid grid-cols-1 gap-5 p-6 pb-15 sm:grid-cols-3" >
                 <p className="absolute bottom-0 right-0 p-4 font-medium"><Link to={"/projetos/VoBujUxIRgqj1gxEmUWl"}>Ver completo</Link> </p>
                 
-                <div onClick={() => navigate("/projetos/VoBujUxIRgqj1gxEmUWl")} >
+                <div onClick={() => navigate("/projetos/TBOkyadtZXYiKdf2d1oW")} >
                     <TiltedCard
                         imageSrc="https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens/kemax/principal.jpg"
                         altText="Kendrick Lamar - GNX Album Cover"
@@ -61,7 +61,7 @@ function ProjetosPreview(){
                         />
                 </Link>
 
-                <Link to={"/projetos/VoBujUxIRgqj1gxEmUWl"}>
+                <Link to={"/projetos/jh3R60cpzMAmMxi3Tss1"}>
                     <TiltedCard
                         imageSrc="https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens/controleCliente/principal.jpg"
                         altText="Sistema"
