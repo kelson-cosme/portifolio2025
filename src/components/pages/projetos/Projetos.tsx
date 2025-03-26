@@ -1,6 +1,4 @@
-import {
-    Card,
-  } from "@/components/ui/card"
+import {Card} from "@/components/ui/card"
    
 import { useProjetos } from "@/components/context/ProjetosProvider";
 import Footer from "@/components/footer/Footer";
