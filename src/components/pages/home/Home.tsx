@@ -1,13 +1,26 @@
+import { useCallback } from 'react';
 import Cards from "@/components/cards"
 import Footer from "@/components/footer/Footer"
 import SobrePreview from "@/components/pages/sobre/SobrePreview";
 import ProjetosPreview from "@/components/pages/projetos/ProjetosPreview";
 import StackPreview from "@/components/pages/stack/StackPreview";
 import RotatingText from '@/ui/RotatingText/RotatingText'
-
 import GridMotion from '@/ui/GridMotion/GridMotion';
+import Particles from "react-tsparticles";
+import { loadSlim } from "tsparticles-slim";
+import { Engine } from "tsparticles-engine";
+import type { Container } from "tsparticles-engine"; // Importe o tipo Container
 
 function Home(){
+  const particlesInit = useCallback(async (engine: Engine) => {
+    await loadSlim(engine);
+  }, []);
+
+  const particlesLoaded = useCallback(async (container: Container | undefined) => {
+    if (container) {
+      console.log("Particles container loaded", container);
+    }
+  }, []);
 
   const items = [
     // Textos simples
@@ -58,16 +71,62 @@ function Home(){
     <div key='jsx-tech-6' className="text-green-400">Git</div>
   ];
 
-    return(
-      <section className="relative overflow-hidden m-auto">
-          <div className="absolute top-0 left-0 h-[100vh] inset-0 " ></div>
-        {/* GridMotion como background */}
-        <div  className="absolute inset-0 bg-black/80 h-[100vh] top-0 left-0 sm:block hidden ">
-          <GridMotion items={items} />
-          {/* Overlay escuro */}
-        </div>
+  return(
+    <section className="relative overflow-hidden m-auto">
+      {/* Background para desktop */}
+      <div className="absolute inset-0 bg-black/80 h-[100vh] top-0 left-0 sm:block hidden">
+        <GridMotion items={items} />
+      </div>
 
-        <div className="h-[100vh] flex flex-col items-center justify-center p-5 relative z-10 sm:text-white text-[#111111] ">
+      {/* Partículas interativas (funciona em mobile e desktop) */}
+      <div className="sm:hidden absolute inset-0 -z-10">
+        <Particles
+          id="tsparticles"
+          init={particlesInit}
+          loaded={particlesLoaded}
+          options={{
+            background: { color: "transparent" },
+            fpsLimit: 120,
+            interactivity: {
+              events: {
+                onClick: { enable: true, mode: "push" },
+                onHover: { enable: true, mode: "repulse" }
+              },
+              modes: {
+                push: { quantity: 2 },
+                repulse: { distance: 100, duration: 0.4 }
+              }
+            },
+            particles: {
+              color: { value: "#ffffff" },
+              links: {
+                color: "#3b82f6",
+                distance: 150,
+                enable: true,
+                opacity: 0.3,
+                width: 1.5
+              },
+              move: {
+                direction: "none",
+                enable: true,
+                outModes: { default: "bounce" },
+                random: false,
+                speed: 2,
+                straight: false
+              },
+              number: { density: { enable: true }, value: 200 },
+              opacity: { value: 0.5 },
+              shape: { type: "circle" },
+              size: { value: { min: 1, max: 3 } }
+            },
+            detectRetina: true
+          }}
+        />
+      </div>
+
+      {/* Conteúdo principal */}
+      <div className="h-[100vh] flex flex-col items-center justify-center p-5 relative z-10 sm:text-white text-[#111111] ">
+
           <div className="sm:flex justify-center items-center">
             <h1 className="text-5xl font-semibold ">Olá👋,</h1>
 
@@ -97,20 +156,22 @@ function Home(){
             </h1>
           </div>
 
+
+
           <p className=" mt-6 sm:w-[50%] text-center">
             Sou estudante apaixonado por tecnologia e design...
           </p>
         </div>
 
-        <div className="relative z-10 max-w-[1366px] m-auto"  >
-          <Cards />
-          <SobrePreview />
-          <ProjetosPreview />
-          <StackPreview />
-          <Footer />
-        </div>
-      </section>
-    )
+      <div className="relative z-10 max-w-[1366px] m-auto">
+        <Cards />
+        <SobrePreview />
+        <ProjetosPreview />
+        <StackPreview />
+        <Footer />
+      </div>
+    </section>
+  )
 }
 
 export default Home
