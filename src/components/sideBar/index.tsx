@@ -5,7 +5,6 @@ import { Link } from "react-router";
 import {
     Sheet,
     SheetContent,
-
     SheetTrigger,
   } from "@/components/ui/sheet"
 
@@ -13,9 +12,10 @@ import {  FolderCode, HomeIcon, Instagram, Linkedin, Menu, Phone, Terminal, User
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Tooltip, TooltipTrigger } from "@radix-ui/react-tooltip";
 import SpotlightCard from '@/ui/SpotlightCard/SpotlightCard';
-
+import { useState } from "react";
 
 function SideBar(){
+    const [open, setOpen] = useState(false);
 
     return(
 
@@ -44,7 +44,7 @@ function SideBar(){
                         
                         <Tooltip>
                             <TooltipTrigger asChild>
-                                <Link className="flex w-full gap-3 shrink-0 items-center rounded-lg text-muted-foreground transition-colors hover:text-white" to={"/sobre"}>
+                                <Link  className="flex w-full gap-3 shrink-0 items-center rounded-lg text-muted-foreground transition-colors hover:text-white" to={"/sobre"}>
                                     <UserRound className="w-5 h-5" />
                                     Sobre
                                     <span className="sr-only">Sobre</span>
@@ -107,7 +107,8 @@ function SideBar(){
                                         <span className="sr-only">Contato</span>
                                     </Link>
                                 </TooltipTrigger>
-                            </Tooltip>                       </TooltipProvider>
+                            </Tooltip>
+                        </TooltipProvider>
                         
                 </nav>
         </SpotlightCard>
@@ -119,7 +120,7 @@ function SideBar(){
             <div className="sm:hidden flex flex-col sm:gap-4 sm:py-4 sm:pl:14 mb-4 sm:mb-0 ">
                 <header className="stick top-0 z-30 flex h-14 items-center px-4 border-b bg-background gap-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6 rounded-[9px]">
                     
-                    <Sheet>
+                    <Sheet open={open} onOpenChange={setOpen}>
                         <SheetTrigger asChild>
                             <Button size="icon" variant="outline" className="sm:hidden">
                                 <Menu className="w-5 h-5"/>
@@ -134,27 +135,27 @@ function SideBar(){
                                     <span className="sr-only">Foto de Kelson</span>
                                 </Link>
 
-                                <Link to="/" className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground">
+                                <Link onClick={() => setOpen(false)}  to="/" className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground">
                                     <HomeIcon className="h-5 w-5 transition-all" />
                                     Inicio
                                 </Link>
 
-                                <Link to="/sobre" className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground">
+                                <Link onClick={() => setOpen(false)}  to="/sobre" className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground">
                                     <UserRound className="h-5 w-5 transition-all" />
                                     Sobre
                                 </Link>
 
-                                <Link to="/projetos" className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground">
+                                <Link onClick={() => setOpen(false)}  to="/projetos" className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground">
                                     <FolderCode className="h-5 w-5 transition-all" />
                                     Projetos
                                 </Link>
 
-                                <Link to="/stack" className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground">
+                                <Link onClick={() => setOpen(false)}  to="/stack" className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground">
                                     <Terminal className="h-5 w-5 transition-all" />
                                     Stack
                                 </Link>
 
-                                <Link to="/contato" className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground">
+                                <Link onClick={() => setOpen(false)}  to="/contato" className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground">
                                     <Phone className="h-5 w-5 transition-all" />
                                     Contato
                                 </Link>
