@@ -21,11 +21,12 @@ function Sobre() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
+            className="mt-4"
           >
             Minha jornada foi construída com uma sólida formação em Engenharia da Computação (UNIC) e especialização em Desenvolvimento Front-End (Anhanguera), aliada a experiência prática em suporte técnico em empresas como Infrawise e Agion Tecnologia.
             </motion.p>
 
-          <Card className="w-full grid grid-cols-1 gap-9 p-6 relative sm:grid-cols-2">
+          <Card className="mt-6 w-full grid grid-cols-1 gap-9 p-6 relative sm:grid-cols-2">
 
 
             <Magnet padding={50} disabled={false} magnetStrength={10}>

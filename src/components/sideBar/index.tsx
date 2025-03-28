@@ -9,7 +9,7 @@ import {
     SheetTrigger,
   } from "@/components/ui/sheet"
 
-import {  FolderCode, HomeIcon, Instagram, Linkedin, Package, PanelBottom, Phone, Terminal, UserRound } from "lucide-react";
+import {  FolderCode, HomeIcon, Instagram, Linkedin, Menu, Package, PanelBottom, Phone, Terminal, UserRound } from "lucide-react";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Tooltip, TooltipTrigger } from "@radix-ui/react-tooltip";
 import SpotlightCard from '@/ui/SpotlightCard/SpotlightCard';
@@ -122,7 +122,7 @@ function SideBar(){
                     <Sheet>
                         <SheetTrigger asChild>
                             <Button size="icon" variant="outline" className="sm:hidden">
-                                <PanelBottom className="w-5 h-5"/>
+                                <Menu className="w-5 h-5"/>
                                 <span className="sr-only">Abrir / fechar menu</span>
                             </Button>
                         </SheetTrigger>
