@@ -1,7 +1,11 @@
 import {Card} from "@/components/ui/card"
 import Footer from "@/components/footer/Footer"
+import { useEffect } from "react";
 
 function Stack(){
+        useEffect(() => {
+            window.scrollTo(0, 0); // Garante que a página comece no topo ao carregar
+        }, []);
     return(
         <section className="max-w-[1366px] m-auto pl-5 pr-5 pb-5 sm:pt-5">
             <h1 className="text-5xl font-medium">Stacks</h1>

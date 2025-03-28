@@ -86,8 +86,6 @@ function Contato(){
           </motion.div>
           </Card>
 
-          <Footer/>
-
     </section>
 
         </>
