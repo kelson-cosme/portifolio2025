@@ -1,34 +1,100 @@
-import { BrowserRouter, Routes, Route} from "react-router"
-import Home from "../pages/home/Home"
-import SideBar from "@/components/sideBar"
-import Sobre from "../pages/sobre/Sobre"
-import Projetos from "../pages/projetos/Projetos"
-import Stack from "../pages/stack/Stack"
-import Contato from "../pages/contato/Contato"
-import ProjetosDetalhes from "@/components/pages/projetos/ProjetosDetalhes"
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
+import Home from "@/components/pages/home/Home";
+import SideBar from "@/components/sideBar";
+import Sobre from "@/components/pages/sobre/Sobre";
+import Projetos from "@/components/pages/projetos/Projetos";
+import Stack from "@/components/pages/stack/Stack";
+import Contato from "@/components/pages/contato/Contato";
+import ProjetosDetalhes from "@/components/pages/projetos/ProjetosDetalhes";
 
+interface PageAnimationProps {
+    children: React.ReactNode;
+    // Outras props podem ser adicionadas aqui
+  }
+// Componente de animação de página
+const PageAnimation = ({ children }: PageAnimationProps) => {
+    return (
+    <motion.div
+    initial={{ scale: 0.9, opacity: 0 }}
+    animate={{ scale: 1, opacity: 1 }}
+    exit={{ scale: 0.9, opacity: 0 }}
+      transition={{ duration: 0.3 }}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
-function Rotas(){
+function Rotas() {
+  const location = useLocation();
 
-
-
-    return(
-        <>
-            <BrowserRouter>
-                <SideBar />
-
-                <Routes>
-                    <Route path="/" element={<Home />} /> 
-                    <Route path="/sobre" element={<Sobre />} />
-                    <Route path="/projetos" element={<Projetos />} />
-                    <Route path="/stack" element={<Stack />} />
-                    <Route path="/contato" element={<Contato />} />
-                    <Route path="/projetos/:id" element={<ProjetosDetalhes />}></Route>
-
-                </Routes>
-            </BrowserRouter>
-        </>
-    )
+  return (
+    <>
+      <SideBar />
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route
+            path="/"
+            element={
+              <PageAnimation>
+                <Home />
+              </PageAnimation>
+            }
+          />
+          <Route
+            path="/sobre"
+            element={
+              <PageAnimation>
+                <Sobre />
+              </PageAnimation>
+            }
+          />
+          <Route
+            path="/projetos"
+            element={
+              <PageAnimation>
+                <Projetos />
+              </PageAnimation>
+            }
+          />
+          <Route
+            path="/stack"
+            element={
+              <PageAnimation>
+                <Stack />
+              </PageAnimation>
+            }
+          />
+          <Route
+            path="/contato"
+            element={
+              <PageAnimation>
+                <Contato />
+              </PageAnimation>
+            }
+          />
+          <Route
+            path="/projetos/:id"
+            element={
+              <PageAnimation>
+                <ProjetosDetalhes />
+              </PageAnimation>
+            }
+          />
+        </Routes>
+      </AnimatePresence>
+    </>
+  );
 }
 
-export default Rotas
+// Componente wrapper para usar useLocation
+function App() {
+  return (
+    <BrowserRouter>
+      <Rotas />
+    </BrowserRouter>
+  );
+}
+
+export default App;

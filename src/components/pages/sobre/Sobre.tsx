@@ -2,12 +2,28 @@ import { Card } from "@/components/ui/card";
 import { Book, GraduationCap, LaptopMinimalCheck, StickyNote } from "lucide-react";
 import Magnet from '@/ui/Magnet/Magnet'
 import Footer from "@/components/footer/Footer";
+import { motion } from "framer-motion";
 
 function Sobre() {
   return (
     <section className="p-5 max-w-[1366px] m-auto">
       <div className="flex flex-col">
-          <h1 className="text-4xl font-bold mb-4">Sobre mim</h1>
+        <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-5xl font-medium"
+          >
+            Sobre mim
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            Minha jornada foi construída com uma sólida formação em Engenharia da Computação (UNIC) e especialização em Desenvolvimento Front-End (Anhanguera), aliada a experiência prática em suporte técnico em empresas como Infrawise e Agion Tecnologia.
+            </motion.p>
 
           <Card className="w-full grid grid-cols-1 gap-9 p-6 relative sm:grid-cols-2">
 

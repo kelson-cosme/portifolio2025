@@ -27,8 +27,8 @@ function SideBar(){
                 <nav className="flex flex-col items-start gap-4 px-[2vw] py-[2vw] w-full ">
                     <TooltipProvider>
                         <Link className="flex w-9 h-9 shrink-0 items-center justify-center bg-primary text-primary-foreground rounded-full" to={"/#"}>
-                            <Package className="flex h-4 w-4 shrink-0 items-center justify-center bg-primary text-primary-foreground rounded-full" />
-                            <span className="sr-only">Avatar</span>
+                        <img className="rounded-full" src="https://avatars.githubusercontent.com/u/71898721?v=4" alt="" />
+                        <span className="sr-only">Avatar</span>
                         </Link>
 
                         <Tooltip>
@@ -130,8 +130,8 @@ function SideBar(){
                         <SheetContent side="left" className="sm:max-w-x p-5">
                             <nav className="grid gap-6 text-lg font-medium">
                                 <Link to="/#" className="flex h-10 w-10 bg-primary rounded-full text-lg items-center justify-center text-sidebar-primary-foreground md:text-base">
-                                    <Package className="h-5 w-5 transition-all" />
-                                    <span className="sr-only">Logo do Projeto</span>
+                                <img className="rounded-full" src="https://avatars.githubusercontent.com/u/71898721?v=4" alt="" />
+                                    <span className="sr-only">Foto de Kelson</span>
                                 </Link>
 
                                 <Link to="/" className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground">

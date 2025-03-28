@@ -31,13 +31,14 @@ function Contato(){
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="  flex-col grid grid-cols-2"
+            className="  flex-col grid gap-5 sm:grid-cols-2"
           >
             <motion.div whileHover={{ scale: 1.05 }}>
               <Link 
                 to={"https://wa.me/5565996646289"} 
                 target="_blank" 
                 className="flex items-center"
+                
               >
                 <div className="w-[15%]">
                   <img 
@@ -53,7 +54,7 @@ function Contato(){
             <motion.div whileHover={{ scale: 1.05 }}>
               <Link 
                 className="flex items-center" 
-                to={"https://google.com"} 
+                to={"https://www.linkedin.com/in/kelson-cosme/"} 
                 target="_blank"
               >
                 <div className="w-[15%]">
@@ -68,8 +69,9 @@ function Contato(){
 
             <motion.div whileHover={{ scale: 1.05 }}>
               <Link 
-                to={"/"} 
+                to={"https://www.instagram.com/kelson.almeida/"} 
                 className="flex items-center"
+                target="_blank"
               >
                 <div className="w-[15%]">
                   <img 
@@ -82,9 +84,11 @@ function Contato(){
             </motion.div>
           </motion.div>
           </Card>
+
+          <Footer/>
+
     </section>
 
-            <Footer/>
         </>
     )
 }
