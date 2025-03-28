@@ -1,6 +1,5 @@
 import {Card} from "@/components/ui/card"
 
-import Footer from "@/components/footer/Footer"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion";
 
