@@ -9,7 +9,7 @@ import {
     SheetTrigger,
   } from "@/components/ui/sheet"
 
-import {  FolderCode, HomeIcon, Instagram, Linkedin, Menu, Package, PanelBottom, Phone, Terminal, UserRound } from "lucide-react";
+import {  FolderCode, HomeIcon, Instagram, Linkedin, Menu, Phone, Terminal, UserRound } from "lucide-react";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Tooltip, TooltipTrigger } from "@radix-ui/react-tooltip";
 import SpotlightCard from '@/ui/SpotlightCard/SpotlightCard';
