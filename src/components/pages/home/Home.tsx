@@ -9,34 +9,54 @@ import GridMotion from '@/ui/GridMotion/GridMotion';
 
 function Home(){
 
-    const items = [
-        'Item 1',
-        <div key='jsx-item-1'>Custom JSX Content</div>,
-        'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        'Item 2',
-        <div key='jsx-item-2'>Custom JSX Content</div>,
-        'Item 4',
-        <div key='jsx-item-2'>Custom JSX Content</div>,
-        'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        'Item 5',
-        <div key='jsx-item-2'>Custom JSX Content</div>,
-        'Item 7',
-        <div key='jsx-item-2'>Custom JSX Content</div>,
-        'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        'Item 8',
-        <div key='jsx-item-2'>Custom JSX Content</div>,
-        'Item 10',
-        <div key='jsx-item-3'>Custom JSX Content</div>,
-        'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        'Item 11',
-        <div key='jsx-item-2'>Custom JSX Content</div>,
-        'Item 13',
-        <div key='jsx-item-4'>Custom JSX Content</div>,
-        'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        'Item 14',
-        // Add more items as needed
-      ];
-      
+  const items = [
+    // Textos simples
+    'React',
+    <div key='jsx-tech-1' className="text-blue-400">Next.js</div>,
+    
+    // Imagens de projetos/tecnologias
+    'https://images.unsplash.com/photo-1627398242454-45a1465c2479?q=80&w=3870&auto=format&fit=crop', // Imagem de código
+    
+    // Mais textos
+    'TypeScript',
+    <div key='jsx-tech-2' className="text-purple-400">Tailwind CSS</div>,
+    
+    // Componentes simples
+    'UI/UX',
+    <div key='jsx-tech-3' className="flex items-center gap-1">
+      <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+      <span>Disponível</span>
+    </div>,
+    
+    // Mais imagens
+    'https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=3870&auto=format&fit=crop', // Imagem de design
+    
+    // Itens diversos
+    'JavaScript',
+    <div key='jsx-tech-4' className="text-yellow-400">ES6+</div>,
+    
+    // Códigos exemplos
+    'CSS Modules',
+    <div key='jsx-code-1' className="text-xs font-mono">npm run dev</div>,
+    
+    // Imagens de interfaces
+    'https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=3870&auto=format&fit=crop', // Imagem de app
+    
+    // Habilidades
+    'Responsive Design',
+    <div key='jsx-tech-5' className="text-pink-400">Animations</div>,
+    
+    // Ícones como componentes
+    'Web Performance',
+    <div key='jsx-icon-1' className="text-2xl">🚀</div>,
+    
+    // Última imagem
+    'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=3870&auto=format&fit=crop', // Imagem de trabalho
+    
+    // Finalizando
+    'Clean Code',
+    <div key='jsx-tech-6' className="text-green-400">Git</div>
+  ];
 
     return(
       <section className="relative overflow-hidden m-auto">
