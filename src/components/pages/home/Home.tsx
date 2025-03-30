@@ -28,7 +28,7 @@ function Home(){
     <div key='jsx-tech-1' className="text-blue-400">Next.js</div>,
     
     // Imagens de projetos/tecnologias
-    'https://images.unsplash.com/photo-1627398242454-45a1465c2479?q=80&w=3870&auto=format&fit=crop', // Imagem de código
+    'https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens//f2.webp', // Imagem de código
     
     // Mais textos
     'TypeScript',
@@ -42,7 +42,7 @@ function Home(){
     </div>,
     
     // Mais imagens
-    'https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=3870&auto=format&fit=crop', // Imagem de design
+    'https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens//f1.webp', // Imagem de design
     
     // Itens diversos
     'JavaScript',
@@ -53,7 +53,7 @@ function Home(){
     <div key='jsx-code-1' className="text-xs font-mono">npm run dev</div>,
     
     // Imagens de interfaces
-    'https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=3870&auto=format&fit=crop', // Imagem de app
+    'https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens//f3.webp', // Imagem de app
     
     // Habilidades
     'Responsive Design',
@@ -64,7 +64,7 @@ function Home(){
     <div key='jsx-icon-1' className="text-2xl">🚀</div>,
     
     // Última imagem
-    'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=3870&auto=format&fit=crop', // Imagem de trabalho
+    'https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens//f4.webp', // Imagem de trabalho
     
     // Finalizando
     'Clean Code',
