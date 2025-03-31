@@ -54,7 +54,7 @@ function ProjetosPreview(){
                         displayOverlayContent={true}
                         overlayContent={
                             <p className="tilted-card-demo-text bg-[black] p-2 rounded-2xl m-5 text-white">
-                                Memórias do Amoor
+                                Memórias do Amor
                             </p>
                         }   
                         />
