@@ -93,7 +93,7 @@ function SideBar(){
                        <TooltipProvider>
                         <Tooltip>
                                 <TooltipTrigger asChild>
-                                    <Link className="flex w-full gap-3 shrink-0 items-center rounded-lg text-muted-foreground transition-colors hover:text-white" to={"/#"}>
+                                    <Link className="flex w-full gap-3 shrink-0 items-center rounded-lg text-muted-foreground transition-colors hover:text-white" to={"https://www.linkedin.com/in/kelson-cosme/"}>
                                         <Linkedin className="w-5 h-5" />
                                             Linkedin
                                         <span className="sr-only">Contato</span>
@@ -101,7 +101,7 @@ function SideBar(){
                                 </TooltipTrigger>
 
                                 <TooltipTrigger asChild>
-                                    <Link className="flex w-full gap-3 shrink-0 items-center rounded-lg text-muted-foreground transition-colors hover:text-white" to={"/#"}>
+                                    <Link className="flex w-full gap-3 shrink-0 items-center rounded-lg text-muted-foreground transition-colors hover:text-white" to={"https://www.instagram.com/kelson-cosme/"}>
                                         <Instagram className="w-5 h-5" />
                                             Instagram
                                         <span className="sr-only">Contato</span>
