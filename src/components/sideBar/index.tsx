@@ -93,7 +93,7 @@ function SideBar(){
                        <TooltipProvider>
                         <Tooltip>
                                 <TooltipTrigger asChild>
-                                    <Link className="flex w-full gap-3 shrink-0 items-center rounded-lg text-muted-foreground transition-colors hover:text-white" to={"https://www.linkedin.com/in/kelson-cosme/"}>
+                                    <Link className="flex w-full gap-3 shrink-0 items-center rounded-lg text-muted-foreground transition-colors hover:text-white" to="https://www.linkedin.com/in/kelson-cosme/" target="_blank" >
                                         <Linkedin className="w-5 h-5" />
                                             Linkedin
                                         <span className="sr-only">Contato</span>
@@ -101,7 +101,7 @@ function SideBar(){
                                 </TooltipTrigger>
 
                                 <TooltipTrigger asChild>
-                                    <Link className="flex w-full gap-3 shrink-0 items-center rounded-lg text-muted-foreground transition-colors hover:text-white" to={"https://www.instagram.com/kelson-cosme/"}>
+                                    <Link className="flex w-full gap-3 shrink-0 items-center rounded-lg text-muted-foreground transition-colors hover:text-white" to="https://www.instagram.com/kelson.almeida/" target="_blank">
                                         <Instagram className="w-5 h-5" />
                                             Instagram
                                         <span className="sr-only">Contato</span>
@@ -167,7 +167,7 @@ function SideBar(){
                                     Linkedin
                                 </Link>
 
-                                <Link to="https://www.instagram.com/kelson-cosme/" target="_blank" className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground">
+                                <Link to="https://www.instagram.com/kelson.almeida/" target="_blank" className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground">
                                     <Instagram className="h-5 w-5 transition-all" />
                                     Instagram
                                 </Link>
