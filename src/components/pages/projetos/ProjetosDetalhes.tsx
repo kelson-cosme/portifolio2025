@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { motion, AnimatePresence } from "framer-motion";
 import {  MoveLeft, Eye } from "lucide-react";
 import Footer from "@/components/footer/Footer";
+import { Skeleton } from "@/components/ui/skeleton"
 
 interface Imagem {
   endereco: string;
@@ -81,6 +82,7 @@ const item = {
 
   return (
     <>
+
       {projetoSelecionado ? (
         <section className="p-5 max-w-[1366px] m-auto" >
           <div>
@@ -190,7 +192,41 @@ const item = {
 
         </section>
       ) : (
-        <h1>Carregando...</h1>
+        <div className="p-5 max-w-[1366px] m-auto">
+    <Skeleton className="h-[48px] w-[300px] rounded-md mb-6" /> {/* Título */}
+    
+    <Card className="p-5 mt-6 flex-col space-y-6">
+      <div className="flex items-center justify-between w-full">
+        <Skeleton className="h-10 w-10 rounded-full" /> {/* Botão voltar */}
+        <Skeleton className="h-4 w-32 rounded-md" /> {/* Categoria */}
+      </div>
+
+      <Skeleton className="h-[400px] w-full rounded-lg" /> {/* Imagem principal */}
+
+      <div className="grid grid-cols-3 gap-5">
+        {Array.from({ length: 3 }).map((_, index) => (
+          <Skeleton key={index} className="h-[150px] w-full rounded-md" />
+        ))}
+      </div>
+
+      <Skeleton className="h-6 w-48 mt-6 rounded-md" /> {/* Recursos título */}
+      <div className="space-y-2">
+        {Array.from({ length: 3 }).map((_, index) => (
+          <Skeleton key={index} className="h-4 w-full rounded-md" />
+        ))}
+      </div>
+
+      <Skeleton className="h-6 w-72 mt-6 rounded-md" /> {/* Tecnologias título */}
+      <div className="grid grid-cols-2 sm:flex gap-5">
+        {Array.from({ length: 4 }).map((_, index) => (
+          <div key={index} className="space-y-2 text-center">
+            <Skeleton className="h-[80px] w-[80px] rounded-full mx-auto" />
+            <Skeleton className="h-4 w-16 mx-auto rounded-md" />
+          </div>
+        ))}
+      </div>
+    </Card>
+  </div>
       )}
 
 
