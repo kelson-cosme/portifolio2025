@@ -28,7 +28,7 @@ function Home(){
     <div key='jsx-tech-1' className="text-blue-400">Next.js</div>,
     
     // Imagens de projetos/tecnologias
-    'backgroundImage', // Imagem de código
+    'https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens//f2.webp', // Imagem de código
     
     // Mais textos
     'TypeScript',
@@ -158,7 +158,14 @@ function Home(){
 
 
 
-          <p className=" mt-6 sm:w-[50%] text-center">
+          <p
+            className="mt-6 sm:w-[50%] text-center text-[clamp(1rem,2vw,1.2rem)]"
+            style={{
+              lineHeight: 1.5,
+              WebkitFontSmoothing: "antialiased",
+              backfaceVisibility: "hidden"
+            }}
+          >
             Sou estudante apaixonado por tecnologia e design...
           </p>
         </div>

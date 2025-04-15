@@ -29,6 +29,7 @@ body {
   animation: gradientMove 10s infinite linear;
 
   font-family: "Montserrat", sans-serif;
+  font-display: swap;
 
 } 
 
