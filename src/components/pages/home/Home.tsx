@@ -28,7 +28,7 @@ function Home(){
     <div key='jsx-tech-1' className="text-blue-400">Next.js</div>,
     
     // Imagens de projetos/tecnologias
-    'https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens//f2.webp', // Imagem de código
+    'backgroundImage', // Imagem de código
     
     // Mais textos
     'TypeScript',
@@ -78,7 +78,7 @@ function Home(){
         <GridMotion items={items} />
       </div>
 
-      {/* Partículas interativas (funciona em mobile e desktop) */}
+      {/* Partículas interativas (funciona em mobile) */}
       <div className="sm:hidden absolute inset-0 -z-10">
         <Particles
           id="tsparticles"
