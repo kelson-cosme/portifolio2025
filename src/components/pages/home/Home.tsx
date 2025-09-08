@@ -70,7 +70,7 @@ function Home(){
         <GridMotion items={items} />
       </div>
 
-      {/* Partículas interativas (funciona em mobile e desktop) */}
+      {/* Partículas interativas (funciona em mobile) */}
       <div className="sm:hidden absolute inset-0 -z-10">
         <Particles
           id="tsparticles"
@@ -150,7 +150,14 @@ function Home(){
 
 
 
-          <p className=" mt-6 sm:w-[50%] text-center">
+          <p
+            className="mt-6 sm:w-[50%] text-center text-[clamp(1rem,2vw,1.2rem)]"
+            style={{
+              lineHeight: 1.5,
+              WebkitFontSmoothing: "antialiased",
+              backfaceVisibility: "hidden"
+            }}
+          >
             Sou estudante apaixonado por tecnologia e design...
           </p>
         </div>
