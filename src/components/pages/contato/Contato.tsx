@@ -2,6 +2,9 @@ import {Card} from "@/components/ui/card"
 
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion";
+import Zap from "../../../../public/RedeSociais/zap.webp"
+import Linkedin from "../../../../public/RedeSociais/linkedin.webp"
+import Instagram from "../../../../public/RedeSociais/insta.webp"
 
 function Contato(){
     return(
@@ -43,7 +46,7 @@ function Contato(){
                 <div className="w-[15%]">
                   <img 
                     className="w-[100%]" 
-                    src="https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens/redeSociais/zap.webp" 
+                    src={Zap}
                     alt="WhatsApp" 
                   />
                 </div>
@@ -59,7 +62,7 @@ function Contato(){
               >
                 <div className="w-[15%]">
                   <img 
-                    src="https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens/redeSociais/linkedin.webp" 
+                    src={Linkedin}
                     alt="LinkedIn" 
                   />
                 </div>
@@ -75,7 +78,7 @@ function Contato(){
               >
                 <div className="w-[15%]">
                   <img 
-                    src="https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens/redeSociais/insta.webp" 
+                    src={Instagram}
                     alt="Instagram" 
                   />
                 </div>

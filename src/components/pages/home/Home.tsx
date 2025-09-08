@@ -11,6 +11,7 @@ import { loadSlim } from "tsparticles-slim";
 import { Engine } from "tsparticles-engine";
 import type { Container } from "tsparticles-engine"; // Importe o tipo Container
 
+
 function Home(){
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadSlim(engine);
@@ -23,50 +24,41 @@ function Home(){
   }, []);
 
   const items = [
-    // Textos simples
     'React',
     <div key='jsx-tech-1' className="text-blue-400">Next.js</div>,
+    // CORREÇÃO: Transforme a string em um elemento <img>
+    <img key='img-f2' src="/grid/f2.webp" alt="Preview de código" className="w-full h-full object-cover rounded-lg" />,
     
-    // Imagens de projetos/tecnologias
-    'https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens//f2.webp', // Imagem de código
-    
-    // Mais textos
     'TypeScript',
     <div key='jsx-tech-2' className="text-purple-400">Tailwind CSS</div>,
     
-    // Componentes simples
     'UI/UX',
     <div key='jsx-tech-3' className="flex items-center gap-1">
       <span className="w-2 h-2 bg-green-500 rounded-full"></span>
       <span>Disponível</span>
     </div>,
     
-    // Mais imagens
-    'https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens//f1.webp', // Imagem de design
+    // CORREÇÃO: Transforme a string em um elemento <img>
+    <img key='img-f1' src="/grid/f1.webp" alt="Preview de design" className="w-full h-full object-cover rounded-lg" />,
     
-    // Itens diversos
     'JavaScript',
     <div key='jsx-tech-4' className="text-yellow-400">ES6+</div>,
     
-    // Códigos exemplos
     'CSS Modules',
     <div key='jsx-code-1' className="text-xs font-mono">npm run dev</div>,
     
-    // Imagens de interfaces
-    'https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens//f3.webp', // Imagem de app
+    // CORREÇÃO: Transforme a string em um elemento <img>
+    <img key='img-f3' src="/grid/f3.webp" alt="Preview de aplicativo" className="w-full h-full object-cover rounded-lg" />,
     
-    // Habilidades
     'Responsive Design',
     <div key='jsx-tech-5' className="text-pink-400">Animations</div>,
     
-    // Ícones como componentes
     'Web Performance',
     <div key='jsx-icon-1' className="text-2xl">🚀</div>,
     
-    // Última imagem
-    'https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens//f4.webp', // Imagem de trabalho
+    // CORREÇÃO: Transforme a string em um elemento <img>
+    <img key='img-f4' src="/grid/f4.webp" alt="Preview de trabalho" className="w-full h-full object-cover rounded-lg" />,
     
-    // Finalizando
     'Clean Code',
     <div key='jsx-tech-6' className="text-green-400">Git</div>
   ];

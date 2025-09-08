@@ -2,6 +2,24 @@ import {Card} from "@/components/ui/card"
 import Footer from "@/components/footer/Footer"
 import { useEffect } from "react";
 
+import Css from "../../../../public/Tecnologias/css.png"
+import Figma from "../../../../public/Tecnologias/figma.png"
+import Firebase from "../../../../public/Tecnologias/firebase.png"
+import Gitub from "../../../../public/Tecnologias/github.png"
+import Html from "../../../../public/Tecnologias/html.png"
+import JavaScript from "../../../../public/Tecnologias/javascript.png"
+import MercadoPago from "../../../../public/Tecnologias/mercadoPago.png"
+import Node from "../../../../public/Tecnologias/node.png"
+import Photoshop from "../../../../public/Tecnologias/photoshop.png"
+import React from "../../../../public/Tecnologias/react.png"
+import Shadcn from "../../../../public/Tecnologias/shadcn.png"
+import Supabase from "../../../../public/Tecnologias/supabase.png"
+import Tailwind from "../../../../public/Tecnologias/tailwind.png"
+import Typescript from "../../../../public/Tecnologias/typescript.png"
+import Vite from "../../../../public/Tecnologias/vite.png"
+
+
+
 function Stack(){
         useEffect(() => {
             window.scrollTo(0, 0); // Garante que a página comece no topo ao carregar
@@ -20,7 +38,7 @@ function Stack(){
 
                     <div>
                         <div  className="w-40 flex items-center">
-                            <img className="w-20" src="https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens/tecnologias/figma.png" alt="" />
+                            <img className="w-20" src={Figma} alt="" />
                             <h3 className="font-medium">Fima</h3>
                         </div>
 
@@ -29,7 +47,7 @@ function Stack(){
 
                     <div>
                         <div  className="w-40 flex items-center">
-                            <img className="w-20" src="https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens/tecnologias/photoshop.png" alt="" />
+                            <img className="w-20" src={Photoshop} alt="" />
                             <h3 className="font-medium">Photoshop</h3>
                         </div>
 
@@ -45,7 +63,7 @@ function Stack(){
 
                     <div>
                         <div  className="w-40 flex items-center">
-                            <img className="w-20" src="https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens/tecnologias/html.png" alt="" />
+                            <img className="w-20" src={Html} alt="" />
                             <h3 className="font-medium">HTML</h3>
                         </div>
 
@@ -54,7 +72,7 @@ function Stack(){
 
                     <div>
                         <div  className="w-40 flex items-center">
-                            <img className="w-20" src="https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens/tecnologias/css.png" alt="" />
+                            <img className="w-20" src={Css} alt="" />
                             <h3 className="font-medium">CSS</h3>
                         </div>
 
@@ -64,7 +82,7 @@ function Stack(){
 
                     <div>
                         <div  className="w-40 flex items-center">
-                            <img className="w-20" src="https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens/tecnologias/react.png" alt="" />
+                            <img className="w-20" src={React} alt="" />
                             <h3 className="font-medium">ReactJs</h3>
                         </div>
 
@@ -74,7 +92,7 @@ function Stack(){
 
                     <div>
                         <div  className="w-40 flex items-center">
-                            <img className="w-20" src="https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens/tecnologias/node.png" alt="" />
+                            <img className="w-20" src={Node} alt="" />
                             <h3 className="font-medium">NodeJs</h3>
                         </div>
 
@@ -84,7 +102,7 @@ function Stack(){
 
                     <div>
                         <div  className="w-40 flex items-center">
-                            <img className="w-20" src="https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens/tecnologias/tailwind.png" alt="" />
+                            <img className="w-20" src={Tailwind} alt="" />
                             <h3 className="font-medium">Tailwind</h3>
                         </div>
 
@@ -94,7 +112,7 @@ function Stack(){
                     
                     <div>
                         <div  className="w-40 flex items-center">
-                            <img className="w-20" src="https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens/tecnologias/vite.png" alt="" />
+                            <img className="w-20" src={Vite} alt="" />
                             <h3 className="font-medium">Vite</h3>
                         </div>
 
@@ -104,7 +122,7 @@ function Stack(){
 
                     <div>
                         <div  className="w-40 flex items-center">
-                            <img className="w-20" src="https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens/tecnologias/typescript.png" alt="" />
+                            <img className="w-20" src={Typescript} alt="" />
                             <h3 className="font-medium">TypeScript</h3>
                         </div>
 
@@ -114,7 +132,7 @@ function Stack(){
 
                     <div>
                         <div  className="w-40 flex items-center">
-                            <img className="w-20" src="https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens/tecnologias/javascript.png" alt="" />
+                            <img className="w-20" src={JavaScript} alt="" />
                             <h3 className="font-medium">JavaScript</h3>
                         </div>
 
@@ -125,7 +143,7 @@ function Stack(){
                     
                     <div>
                         <div  className="w-40 flex items-center">
-                            <img className="w-20" src="https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens/tecnologias/shadcn.png" alt="" />
+                            <img className="w-20" src={Shadcn} alt="" />
                             <h3 className="font-medium">Shadcn UI/UX</h3>
                         </div>
 
@@ -135,7 +153,7 @@ function Stack(){
 
                     <div>
                         <div  className="w-40 flex items-center">
-                            <img className="w-20" src="https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens/tecnologias/mercadoPago.png" alt="" />
+                            <img className="w-20" src={MercadoPago} alt="" />
                             <h3 className="font-medium">Api MercadoPago</h3>
                         </div>
 
@@ -152,7 +170,7 @@ function Stack(){
 
                     <div>
                         <div  className="w-40 flex items-center">
-                            <img className="w-20" src="https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens/tecnologias/firebase.png" alt="" />
+                            <img className="w-20" src={Firebase} alt="" />
                             <h3 className="font-medium">Firebase</h3>
                         </div>
 
@@ -161,7 +179,7 @@ function Stack(){
 
                     <div>
                         <div  className="w-40 flex items-center">
-                            <img className="w-20" src="https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens/tecnologias/supabase.png" alt="" />
+                            <img className="w-20" src={Supabase} alt="" />
                             <h3 className="font-medium">Supabase</h3>
                         </div>
 
@@ -177,7 +195,7 @@ function Stack(){
 
                     <div>
                         <div  className="w-40 flex items-center">
-                            <img className="w-20" src="https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens/tecnologias/github.png" alt="" />
+                            <img className="w-20" src={Gitub} alt="" />
                             <h3 className="font-medium">GitHub</h3>
                         </div>
 

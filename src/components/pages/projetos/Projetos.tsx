@@ -7,7 +7,7 @@ import TiltedCard from "@/ui/TiltedCard/TiltedCard"
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
-
+// import ControleDiario from "../../../../public/ControleClientes/principal.webp"
 
 function Projetos(){
 

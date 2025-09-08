@@ -6,6 +6,11 @@ import {
 
   import TiltedCard from "@/ui/TiltedCard/TiltedCard"
 
+  import Kemax from "../../../../public/Kemax/principal.webp"
+  import MemoriaDoAmor from "../../../../public/MemoriasDoAmor/principal.webp"
+  import ControleClientes from "../../../../public/ControleCliente/principal.webp"
+
+
 
 function ProjetosPreview(){
 
@@ -18,8 +23,8 @@ function ProjetosPreview(){
                 
                 <Link to={"/projetos/TBOkyadtZXYiKdf2d1oW"}>
                     <TiltedCard
-                        imageSrc="https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens/kemax/principal.webp"
-                        altText="Kendrick Lamar - GNX Album Cover"
+                        imageSrc={Kemax}
+                        altText=""
                         captionText="Landing Page"
                         containerHeight="300px"
                         containerWidth="100%"
@@ -40,8 +45,8 @@ function ProjetosPreview(){
                 
                 <Link to={"/projetos/VoBujUxIRgqj1gxEmUWl"}>
                     <TiltedCard
-                        imageSrc="https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens/memoriasDoAmor/principal.webp"
-                        altText="Kendrick Lamar - GNX Album Cover"
+                        imageSrc={MemoriaDoAmor}
+                        altText="Memorias Do Amor"
                         captionText="MicroSaaS"
                         containerHeight="300px"
                         containerWidth="100%"
@@ -62,7 +67,7 @@ function ProjetosPreview(){
 
                 <Link to={"/projetos/jh3R60cpzMAmMxi3Tss1"}>
                     <TiltedCard
-                        imageSrc="https://ijvswpmlxhukauulpzjd.supabase.co/storage/v1/object/public/imagens/controleCliente/principal.webp"
+                        imageSrc={ControleClientes}
                         altText="Sistema"
                         captionText="Sistema"
                         containerHeight="300px"
